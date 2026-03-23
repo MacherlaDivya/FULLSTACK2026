@@ -1,0 +1,93 @@
+═══════════════════════════════════════════════════════════════════
+    GIT WORKFLOW - How to Sync Changes to GitHub
+═══════════════════════════════════════════════════════════════════
+
+BASIC WORKFLOW (4 STEPS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. CHECK WHAT CHANGED:
+   git status
+
+2. STAGE YOUR CHANGES:
+   git add .
+   (This stages all new, modified, and deleted files)
+
+3. COMMIT WITH A MESSAGE:
+   git commit -m "Description of what you changed"
+
+4. PUSH TO GITHUB:
+   git push
+
+
+QUICK EXAMPLE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Added a new project folder (20260220/):
+
+   git status
+   git add .
+   git commit -m "Add 20260220 project"
+   git push
+
+
+COMMON SCENARIOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▸ ADDING A NEW FOLDER/FILE:
+   git add .
+   git commit -m "Add new folder"
+   git push
+
+▸ MODIFYING EXISTING FILES:
+   git add .
+   git commit -m "Update course controller"
+   git push
+
+▸ DELETING A FOLDER:
+   git rm -r 20260128/
+   git commit -m "Remove 20260128 folder"
+   git push
+
+▸ DELETING A FILE:
+   git rm path/to/file.js
+   git commit -m "Remove file.js"
+   git push
+
+▸ STAGING SPECIFIC FILES ONLY:
+   git add path/to/file1.js path/to/file2.js
+   git commit -m "Update specific files"
+   git push
+
+
+USEFUL COMMANDS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• View commit history:
+  git log --oneline
+
+• See differences in files:
+  git diff
+
+• Undo staging (before commit):
+  git reset
+
+• Check remote repository URL:
+  git remote -v
+
+• Pull latest changes from GitHub:
+  git pull
+
+
+REMEMBER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The pattern is always:  ADD → COMMIT → PUSH
+
+• Make changes in your files
+• git add .
+• git commit -m "message"
+• git push
+
+═══════════════════════════════════════════════════════════════════
+    GitHub Repository: https://github.com/Jangala-Megha-Harsha/DevOps_2026
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,29 @@
+name: CI - Dockerize Node.js API
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker image
+        working-directory: 20260218/personal-finance-tracker-api
+        run: |
+          docker build -t finance-tracker-api .
+
+      - name: Run Docker container
+        run: |
+          docker run -d -p 3000:3000 finance-tracker-api
